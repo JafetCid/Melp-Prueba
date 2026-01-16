@@ -53,7 +53,6 @@ export default function Home() {
     );
   }, [restaurants, center, radius]);
 
-
   // Ordenar de mayor a menor
   const sortedRestaurants = [...restaurants].sort((a, b) => b.rating - a.rating).slice(0, 6);
 
