@@ -49,8 +49,8 @@ export default function Home() {
           <span className="text-lg font-semibold text-orange-400">Recomendado</span>
         </div>
         <div className="flex flex-col justify-between w-full mb-10 md:flex-row">
-          <h2 className="text-2xl font-bold">Top Mejores Restaurantes</h2>
-          <p onClick={() => route.push("allRestaurants")} className="flex items-center text-lg gap-2 cursor-pointer mt-5 hover:-translate-y-1 transition-all duration-300 md:mt-0">Ver todos <IoArrowForward size={20} /></p>
+          <h2 className="text-2xl font-bold">Top 6 Mejores Restaurantes</h2>
+          <p onClick={() => route.push("Restaurants")} className="flex items-center text-lg gap-2 cursor-pointer mt-5 hover:-translate-y-1 transition-all duration-300 md:mt-0">Ver todos <IoArrowForward size={20} /></p>
         </div>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {sortedRestaurants.map((restaurant, index) => (
