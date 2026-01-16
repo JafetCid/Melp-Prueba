@@ -41,6 +41,25 @@ export const getClosestRestaurants = (center: { lat: number; lng: number }, rest
     .slice(0, limit);
 };
 
+type Center = {
+  lat: number;
+  lng: number;
+}
+
+export const countRestaurantsRadius = (center: Center, restaurants: Restaurants[], radius: number ): number => {
+   return restaurants.filter((restaurant) => {
+    const distance = getDistanceInMeters(
+      center.lat,
+      center.lng,
+      restaurant.address.location.lat,
+      restaurant.address.location.lng
+    );
+
+    return distance <= radius;
+  }).length;
+}
+
+
 // Función principal
 export const analyzeRestaurantsInRadius = (restaurants: Restaurants[], centerLat: number, centerLng: number, radiusMeters: number) => {
   const filtered = restaurants.filter((restaurant) => {

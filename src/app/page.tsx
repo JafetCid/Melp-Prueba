@@ -62,7 +62,7 @@ export default function Home() {
   return (
     <>
       <div className="flex justify-center items-center p-2 mb-10 md:p-8">
-        <h1 className="absolute text-center text-3xl w-80 text-white font-bold hover:text-gray-200 md:w-2xl md:text-5xl lg:w-4xl lg:text-6xl">Descubre la Comida que se Encuentra en Tu Ciudad</h1>
+        <h1 className="absolute text-center text-3xl w-80 text-white font-bold hover:text-gray-200 md:w-2xl md:text-5xl lg:w-4xl lg:text-6xl">¡Descubre la Comida que se Encuentra en Tu Ciudad!</h1>
         <Image src="/images/platillo.png" alt="" width={800} height={500} className="object-cover w-full h-112.5 rounded-2xl" />
       </div>
 
