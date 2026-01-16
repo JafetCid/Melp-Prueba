@@ -1,12 +1,12 @@
 'use client'
 
-import Image from 'next/image';
 import { useEffect, useState } from 'react'
 
 import Card from '@/components/Card';
 import { useLoading } from '@/context/loadingContext';
 import { Restaurants } from '@/types/views/restaurants';
 import Loading from '@/components/Loading';
+import ScrollToTop from '@/components/ScrollTop';
 
 export default function page() {
 
@@ -42,7 +42,7 @@ export default function page() {
                     {sortedRestaurants.map((restaurant, index) => (
                         <Card
                             key={index}
-                            srcImg="/images/platillo.png"
+                            srcImg="/images/platillo2.png"
                             rating={restaurant.rating}
                             name={restaurant.name}
                             state={restaurant.address.state}
@@ -55,6 +55,7 @@ export default function page() {
                     ))}
                 </div>
             </div>
+            <ScrollToTop/>
         </>
     )
 }

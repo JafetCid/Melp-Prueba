@@ -42,7 +42,7 @@ export default function Card({ rating, srcImg, name, state, city, street, email,
         <div className="flex flex-col shadow-xl rounded-xl w-fit">
             <div className="flex">
                 <span className="absolute bg-white py-1 px-4 m-2 rounded-xl">⭐ {rating}</span>
-                <Image src={srcImg} alt="" width={500} height={500} className="object-center rounded-t-xl" />
+                <Image src={srcImg} alt="" width={500} height={500} className="object-center rounded-t-xl h-56 xl:h-72" />
             </div>
             <div className="flex flex-col gap-4 p-5 text-gray-500">
                 <p className="text-lg font-semibold break-all text-black">{name}</p>
