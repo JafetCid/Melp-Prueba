@@ -35,6 +35,7 @@ export default function Navbar({ navLinks, href }: PropsNavbar) {
                     })}
                 </nav>
             </nav>
+            <div className="h-px border border-gray-100 mb-8" />
         </header>
     );
 }

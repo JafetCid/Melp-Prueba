@@ -49,12 +49,12 @@ export default function FilterMap({ center, radius, restaurants, onChangeCenter,
                     step={500}
                     value={radius}
                     onChange={(e) => onChange(e.target.value)}
-                    className="w-full accent-orange-400 hover:accent-amber-500 sm:w-56"
+                    className="w-full h-2 bg-gray-200 rounded-full appearance-none accent-orange-400 sm:w-56"
                 />
             </div>
-            <div className="flex flex-col gap-5 lg:flex-row">
+            <div className="flex flex-col gap-5 xl:flex-row">
                 <MapContainer
-                    className=" h-125 lg:w-[50%]"
+                    className="w-full h-125 xl:w-[50%]"
                     center={center}
                     zoom={14}
                     scrollWheelZoom
@@ -129,7 +129,7 @@ export default function FilterMap({ center, radius, restaurants, onChangeCenter,
                 </MapContainer>
 
                 {/* Recomendaciones */}
-                <div className="w-full lg:w-1/2">
+                <div className="w-full xl:w-1/2">
                     <div className="flex justify-center gap-2">
                         <IoRestaurantSharp size={25} className="text-orange-400" />
                         <h2 className="text-xl text-center font-bold text-orange-400 mb-5">Recomendaciones más cercanas</h2>
