@@ -7,6 +7,7 @@ import { countRestaurantsRadius, getClosestRestaurants } from "@/domain/services
 import Image from "next/image";
 import { IoRestaurantSharp } from "react-icons/io5";
 
+const basePath = process.env.NODE_ENV === 'production' ? '/Melp-Prueba' : '';
 
 export default function FilterMap({ center, radius, restaurants, onChangeCenter, onChange }: PropsFilterMap) {
 
@@ -147,7 +148,7 @@ export default function FilterMap({ center, radius, restaurants, onChangeCenter,
                                 <div key={index} className="flex flex-col w-full max-w-md bg-gray-50 rounded-xl shadow-md p-6 transition hover:shadow-lg sm:flex-row sm:items-center">
                                     <div className="shrink-0 flex justify-center sm:justify-start">
                                         <Image
-                                            src="/images/platillo2.png"
+                                            src={`${basePath}/images/platillo2.png`}
                                             alt={r.name}
                                             width={80}
                                             height={80}

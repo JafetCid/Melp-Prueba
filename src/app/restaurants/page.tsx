@@ -9,6 +9,8 @@ import Loading from '@/components/Loading';
 import ScrollToTop from '@/components/ScrollTop';
 import { getRestaurants } from '@/api/getRestaurants';
 
+const basePath = process.env.NODE_ENV === 'production' ? '/Melp-Prueba' : '';
+
 export default function page() {
 
     const { setIsLoading } = useLoading();
@@ -42,7 +44,7 @@ export default function page() {
                     {sortedRestaurants.map((restaurant, index) => (
                         <Card
                             key={index}
-                            srcImg="/images/platillo2.png"
+                            srcImg={`${basePath}/images/platillo2.png`}
                             rating={restaurant.rating}
                             name={restaurant.name}
                             state={restaurant.address.state}
