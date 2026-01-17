@@ -64,7 +64,7 @@ export default function Home() {
     <>
       <div className="flex justify-center items-center p-2 mb-10 md:p-8">
         <h1 className="absolute text-center text-3xl w-80 text-white font-bold hover:text-gray-200 md:w-2xl md:text-5xl lg:w-4xl lg:text-6xl">¡Descubre la Comida que se Encuentra en Tu Ciudad!</h1>
-        <Image src={`${basePath}/images/platillo.png`} alt="img-1" width={800} height={500} className="object-cover w-full h-112.5 rounded-2xl" />
+        <Image src={`${basePath}/images/platillo.jpg`} alt="img-1" width={800} height={500} className="object-cover w-full h-112.5 rounded-2xl" />
       </div>
 
       <div className="flex flex-col w-full px-8 mb-16">
@@ -79,7 +79,7 @@ export default function Home() {
           {sortedRestaurants.map((restaurant, index) => (
             <Card
               key={index}
-              srcImg={`${basePath}/images/platillo.png`}
+              srcImg={`${basePath}/images/platillo.jpg`}
               rating={restaurant.rating}
               name={restaurant.name}
               state={restaurant.address.state}

@@ -110,7 +110,7 @@ export default function FilterMap({ center, radius, restaurants, onChangeCenter,
                             <Popup closeButton={false}>
                                 <div className="flex items-center gap-3 p-2 min-w-45">
                                     <img
-                                        src="/images/platillo2.png"
+                                        src={`${basePath}/images/platillo2.jpg`}
                                         alt=""
                                         className="w-10 h-10 rounded-full object-cover"
                                     />
@@ -148,7 +148,7 @@ export default function FilterMap({ center, radius, restaurants, onChangeCenter,
                                 <div key={index} className="flex flex-col w-full max-w-md bg-gray-50 rounded-xl shadow-md p-6 transition hover:shadow-lg sm:flex-row sm:items-center">
                                     <div className="shrink-0 flex justify-center sm:justify-start">
                                         <Image
-                                            src={`${basePath}/images/platillo2.png`}
+                                            src={`${basePath}/images/platillo2.jpg`}
                                             alt={r.name}
                                             width={80}
                                             height={80}
