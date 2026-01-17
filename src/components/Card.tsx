@@ -49,7 +49,7 @@ export default function Card({ rating, srcImg, name, state, city, street, email,
                 <p className="flex gap-2 break-all"><IoCall size={20} /> {phone}</p>
                 <p className="flex gap-2 break-all"><IoGlobeOutline size={20} /> {site}</p>
                 <p className="flex gap-2 break-all"><IoMailSharp size={20} /> {email}</p>
-                <p className="flex gap-2 break-all"><IoLocationSharp size={20} /> {street}, {state}, {city}</p>
+                <p className="flex gap-2 break-all"><IoLocationSharp size={20} className="shrink-0" /> {street}, {state}, {city}</p>
                 <div className="h-px border border-gray-200"></div>
                 <div className="flex flex-wrap gap-2 justify-between">
                     <div className="flex gap-3 items-center">
