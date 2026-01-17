@@ -28,7 +28,7 @@ export default function Navbar({ navLinks, href }: PropsNavbar) {
                             <Link key={href} href={href} className="relative inline-flex items-center gap-2 font-medium rounded-md px-3 py-1">
                                 <span className="hover:text-orange-400">{label}</span>
                                 {isActive && (
-                                    <span className="absolute -bottom-0.5 left-2 right-2 h-px rounded-lg bg-orange-400" />
+                                    <span className="absolute -bottom-0.5 left-2 right-2 h-0.5 rounded-lg bg-orange-400" />
                                 )}
                             </Link>
                         );

@@ -7,6 +7,7 @@ import { useLoading } from '@/context/loadingContext';
 import { Restaurants } from '@/types/views/restaurants';
 import Loading from '@/components/Loading';
 import ScrollToTop from '@/components/ScrollTop';
+import { getRestaurants } from '@/api/getRestaurants';
 
 export default function page() {
 
@@ -14,19 +15,18 @@ export default function page() {
     const [restaurants, setRestaurants] = useState<Restaurants[]>([]);
 
     useEffect(() => {
-        const getRestaurants = async () => {
+        const getRestaurant = async () => {
             try {
                 setIsLoading(true);
-                const res = await fetch("/api/restaurants");
-                const data = await res.json();
-                setRestaurants(data);
+                const res = await getRestaurants();
+                setRestaurants(res);
             } catch (error) {
-                console.error("Error al cargar restaurantes:", error);
+                console.error("Error:", error);
             } finally {
                 setIsLoading(false);
             }
         };
-        getRestaurants();
+        getRestaurant();
     }, []);
 
     // Ordenar de mayor a menor

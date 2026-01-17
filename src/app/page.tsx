@@ -11,6 +11,7 @@ import Card from '@/components/Card'
 import { Restaurants } from '@/types/views/restaurants';
 import { useLoading } from '@/context/loadingContext';
 import { analyzeRestaurantsInRadius } from '@/domain/services/analyzeRestaurantsInRadius';
+import { getRestaurants } from '@/api/getRestaurants';
 
 const RestaurantsMap = dynamic(
   () => import("../components/FilterMap"),
@@ -29,19 +30,18 @@ export default function Home() {
   });
 
   useEffect(() => {
-    const getRestaurants = async () => {
+    const getRestaurant = async () => {
       try {
         setIsLoading(true);
-        const res = await fetch("/api/restaurants");
-        const data = await res.json();
-        setRestaurants(data);
+        const res = await getRestaurants();
+        setRestaurants(res);
       } catch (error) {
         console.error("Error al cargar restaurantes:", error);
       } finally {
         setIsLoading(false);
       }
     };
-    getRestaurants();
+    getRestaurant();
   }, []);
 
   const result = useMemo(() => {
