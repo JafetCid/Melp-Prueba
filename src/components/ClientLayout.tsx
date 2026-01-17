@@ -9,7 +9,7 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
 
     const navLinks = [
         { href: "/", label: "Inicio" },
-        { href: "/restaurants", label: "Restaurantes" },
+        { href: "/restaurants/", label: "Restaurantes" },
     ];
 
     return (

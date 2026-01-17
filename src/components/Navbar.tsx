@@ -1,10 +1,10 @@
 'use client';
 
-import { PropsNavbar } from "@/types/components/navbar";
-// import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { IoFastFood } from "react-icons/io5";
+
+import { PropsNavbar } from "@/types/components/navbar";
 
 export default function Navbar({ navLinks, href }: PropsNavbar) {
 

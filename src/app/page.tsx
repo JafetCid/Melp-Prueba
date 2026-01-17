@@ -79,7 +79,7 @@ export default function Home() {
           {sortedRestaurants.map((restaurant, index) => (
             <Card
               key={index}
-              srcImg={`${basePath}/images/platillo.jpg`}
+              srcImg={`${basePath}/images/platillo2.jpg`}
               rating={restaurant.rating}
               name={restaurant.name}
               state={restaurant.address.state}
